@@ -23,7 +23,7 @@ var contact = [
 {
     "firstName": "kristin",
     "lastName": "Charmes",
-
+ 
     "number": "09107878682",
     "likes": ["Javascript","Gaming"] 
 }
@@ -31,7 +31,7 @@ var contact = [
 
 function lookUpProfile (name, property){
 
-    for (var i = 0; i < contact.length; i++){
+    for (let i = 0; i < contact.length; i++){
     
         if(contact[i].firstName == name){
             return contact[i][property] || "no such property"
@@ -144,3 +144,127 @@ thermos.temperature = 26;
 temp = thermos.temperature;
 
 console.log(temp)
+
+// let jar = "solution"
+
+// let  film = jar.charAt(3) 
+
+// let time = jar.slice(2)
+
+// console.log(film)
+// console.log(time)
+
+
+// var employee={
+//     name:'nelson',
+//     skill: "memory",
+//     worth: "wealthy",
+//     age: 25
+// }
+
+// var handler = { get (target, key){
+//     return key in target ? target[key]: "Invalid input, please verify!"
+//     }
+// };
+// var employee = new Proxy ({employee},handler)
+//     employee.name='nelson',
+//     employee.skill= "memory",
+//     employee.worth= "wealthy",
+//     employee.age= 25
+
+//     // employee.status = "single"
+    
+// console.log(employee.worth, employee.name, employee.skill,employee.status)
+// console.log(employee.growth)
+
+
+// var handler = {
+//     set: function (target, prop, value){
+//         if (prop === "age"){
+//             if(typeof value !== 'number' || Number.isNaN(value)){
+//                 console.log("age must be a number")
+//             }
+//                 if(value < 0){
+//                     console.log("age must be a positive number")
+//                 }
+//             } 
+//             target[prop] = value;
+             
+//             return true;
+//     }
+// }
+// var man = new Proxy ({man},handler)
+//  man.age= "nelson"
+//     man.age = -34
+//     man.age = 74
+ 
+//  console.log(man.age)
+
+// var vosel = {
+//     town: {
+//     abuja: 190,
+//     yola: 123,
+//     lagos: 299 
+//     },
+
+//     shop:{
+//         abuja: 50,
+//         yola: 3,
+//         lagos: 99 
+//         }
+// }
+
+// var {town:{lagos:u}}=vosel
+// console.log(u
+
+
+// using the higher order function
+
+// var terra = [2,8,12,22,32]
+// var team = []
+
+// function subnumb(array){
+//     for(let i=0; i < array.length; i++){
+//         console.log(array[i]-2)
+//     }
+// }
+// team.push(...terra)
+
+// console.log(team)
+
+// Using the forEach higher function to do the same thing
+
+// terra.forEach((element) => console.log(element - 2));
+
+// const numbers = [1, 2, 3, 4, 5];
+// function isOdd(array) {
+// var oddArr = []
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] % 2 !== 0) {
+//       oddArr.push(array[i]);
+//     }
+//   }
+//   return oddArr;
+// }
+
+// const oddArray = isOdd(numbers);
+// console.log(oddArray);
+
+// // Using the flitter higher function to do the same thing
+
+// const oddnumb = numbers.filter((content) => content % 2 !==0);
+
+// console.log(oddnumb)
+
+// perfect
+
+// we can use the reduce higher order funcition to sum the total elements in an aray
+
+
+var terra = [2,8,12,22,32]
+
+const total1 = terra.reduce((sum,element)=> sum+ element)
+
+console.log(total1)
+
+// done!
